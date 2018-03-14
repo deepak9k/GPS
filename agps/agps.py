@@ -64,7 +64,7 @@ def set_location(bus_id):
             }
         record.append(task)
 
-    return jsonify({record}), 201
+    return jsonify({"north": request.form['north']}), 201
 
 
 if __name__=="__main__":
