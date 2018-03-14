@@ -41,6 +41,7 @@ def get_location(bus_id):
         if task['id']==bus_id:
            north = task['north']
            east =  task['east']
+
            print("done if")
     print("done for")
     return render_template('map.html', north=north, east=east)
@@ -63,7 +64,7 @@ def set_location(bus_id):
             }
         record.append(task)
 
-    return jsonify({'added':bus_id}), 201
+    return jsonify({record}), 201
 
 
 if __name__=="__main__":
