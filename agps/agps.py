@@ -50,7 +50,7 @@ def get_location(bus_id):
 def set_location(bus_id):
 
     flag=0
-
+    test=request.form['north']
     for task in record:
         if task['id']==bus_id:
             flag=1
@@ -64,7 +64,7 @@ def set_location(bus_id):
             }
         record.append(task)
 
-    return jsonify({"north": request.form['north']}), 201
+    return jsonify({"north": test}), 201
 
 
 if __name__=="__main__":
